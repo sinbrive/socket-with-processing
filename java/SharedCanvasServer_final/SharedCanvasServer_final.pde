@@ -51,6 +51,7 @@ void draw() {
       // Send mouse coords to other person
       String s=pmouseX + " " + pmouseY + " " + mouseX + " " + mouseY + "\n";
       out.writeUTF(s);
+      out.flush();
     }
     // Receive data from client
     if (in.available()>0) {
